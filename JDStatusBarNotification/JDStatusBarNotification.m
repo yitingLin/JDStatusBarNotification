@@ -192,7 +192,9 @@
                     style:(JDStatusBarStyle*)style;
 {
     // first, check if status bar is visible at all
-    if ([UIApplication sharedApplication].statusBarHidden) return nil;
+    if (!style.showEvenStatusBarHidden) {
+        if ([UIApplication sharedApplication].statusBarHidden) return nil;
+    }
     
     // prepare for new style
     if (style != self.activeStyle) {

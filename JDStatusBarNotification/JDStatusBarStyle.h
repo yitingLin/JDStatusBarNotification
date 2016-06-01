@@ -51,6 +51,9 @@ typedef NS_ENUM(NSInteger, JDStatusBarProgressBarPosition) {
 /// A correction of the vertical label position in points. Default is 0.0
 @property (nonatomic, assign) CGFloat textVerticalPositionAdjustment;
 
+/// whether show when StatusBarHidden is true. Default is NO
+@property (nonatomic, assign) BOOL showEvenStatusBarHidden;
+
 #pragma mark Animation
 
 /// The animation, that is used to present the notification
